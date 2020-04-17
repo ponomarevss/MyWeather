@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="place">set place</string>
+    <string name="temperature_value">-88</string>
+    <string name="weather">Partly cloudy</string>
+    <string name="partly_cloudy" translatable="false">partly_cloudy</string>
+    <string name="cloudy" translatable="false">cloudy</string>
+    <string name="sunny" translatable="false">sunny</string>
+    <string name="settings_button" translatable="false">settings</string>
+    <string name="back">Back</string>
+    <string name="place_label">Location:</string>
+    <string name="current_location">not specified</string>
+    <string name="background" translatable="false">background</string>
+
+    <string name="wind">Wind speed and direction</string>
+    <string name="humidity">Humidity</string>
+    <string name="pressure">Atmospheric pressure</string>
+    <string name="m_s">m/s</string>
+    <string name="percent">%</string>
+    <string name="mmhg">mmHg</string>
+
+    <string name="more_info">more info ></string>
+    <string name="last_places"><![CDATA[last places >]]></string>
+    <string name="day">day</string>
+    <string name="temperature_unit">°C</string>
+    <string name="hour_value">00:00</string>
+    <string name="back_to_main_button">back_to_main_button</string>
+    <string name="back_to_settings_button">back_to_settings_button</string>
+    <string name="locate">locate</string>
+    <string name="city">city</string>
+
+    <string name="places_screen_button">%s ></string>
+    <string name="url">https://yandex.ru/pogoda/</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="commit">commit</string>
+    <string name="city_image">city image</string>
+
+
+</resources>

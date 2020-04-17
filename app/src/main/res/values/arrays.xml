@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cities">
+        <item>Астрахань</item>
+        <item>Барнаул</item>
+        <item>Владивосток</item>
+        <item>Волгоград</item>
+        <item>Воронеж</item>
+        <item>Екатеринбург</item>
+        <item>Ижевск</item>
+        <item>Иркутск</item>
+        <item>Казань</item>
+        <item>Кемерово</item>
+        <item>Киров</item>
+        <item>Краснодар</item>
+        <item>Красноярск</item>
+        <item>Липецк</item>
+        <item>Махачкала</item>
+        <item>Москва</item>
+        <item>Набережные Челны</item>
+        <item>Нижний Новгород</item>
+        <item>Новокузнецк</item>
+        <item>Новосибирск</item>
+        <item>Омск</item>
+        <item>Оренбург</item>
+        <item>Пенза</item>
+        <item>Пермь</item>
+        <item>Ростов-на-Дону</item>
+        <item>Рязань</item>
+        <item>Самара</item>
+        <item>Санкт-Петербург</item>
+        <item>Саратов</item>
+        <item>Тольятти</item>
+        <item>Томск</item>
+        <item>Тюмень</item>
+        <item>Ульяновск</item>
+        <item>Уфа</item>
+        <item>Хабаровск</item>
+        <item>Челябинск</item>
+        <item>Ярославль</item>
+    </string-array>
+    <string-array name="cities_url">
+        <item>astrahan</item>
+        <item>barnaul</item>
+        <item>vladivostok</item>
+        <item>volgograd</item>
+        <item>voronezh</item>
+        <item>yekaterinburg</item>
+        <item>izhevsk</item>
+        <item>irkutsk</item>
+        <item>kazan</item>
+        <item>kemerovo</item>
+        <item>kirov</item>
+        <item>krasnodar</item>
+        <item>krasnoyarsk</item>
+        <item>lipetsk</item>
+        <item>makhachkala</item>
+        <item>moscow</item>
+        <item>naberezhnie-chelny</item>
+        <item>nizhny-novgorod</item>
+        <item>novokuznetsk</item>
+        <item>novosibirsk</item>
+        <item>omsk</item>
+        <item>orenburg</item>
+        <item>penza</item>
+        <item>perm</item>
+        <item>rostov-na-donu</item>
+        <item>ryazan</item>
+        <item>samara</item>
+        <item>saint-petersburg</item>
+        <item>saratov</item>
+        <item>togliatti</item>
+        <item>tomsk</item>
+        <item>tyumen</item>
+        <item>ulyanovsk</item>
+        <item>ufa</item>
+        <item>khabarovsk</item>
+        <item>chelyabinsk</item>
+        <item>yaroslavl</item>
+    </string-array>
+
+    <string-array name="days">
+        <item>Сегодня</item>
+        <item>Завтра</item>
+        <item>Послезавтра</item>
+    </string-array>
+
+    <string-array name="hours">
+        <item>00:00</item>
+        <item>03:00</item>
+        <item>06:00</item>
+        <item>09:00</item>
+        <item>12:00</item>
+        <item>15:00</item>
+        <item>18:00</item>
+        <item>21:00</item>
+    </string-array>
+
+    <integer-array name="city_images">
+        <item>@drawable/ci_astrahan</item>
+        <item>@drawable/ci_barnaul</item>
+        <item>@drawable/ci_vladivostok</item>
+        <item>@drawable/ci_volgograd</item>
+        <item>@drawable/ci_voronezh</item>
+        <item>@drawable/ci_yekaterinburg</item>
+        <item>@drawable/ci_izhevsk</item>
+        <item>@drawable/ci_irkutsk</item>
+        <item>@drawable/ci_kazan</item>
+        <item>@drawable/ci_kemerovo</item>
+        <item>@drawable/ci_kirov</item>
+        <item>@drawable/ci_krasnodar</item>
+        <item>@drawable/ci_krasnoyarsk</item>
+        <item>@drawable/ci_lipetsk</item>
+        <item>@drawable/ci_makhachkala</item>
+        <item>@drawable/ci_moscow</item>
+        <item>@drawable/ci_naberezhnie_chelny</item>
+        <item>@drawable/ci_nizhny_novgorod</item>
+        <item>@drawable/ci_novokuznetsk</item>
+        <item>@drawable/ci_novosibirsk</item>
+        <item>@drawable/ci_omsk</item>
+        <item>@drawable/ci_orenburg</item>
+        <item>@drawable/ci_penza</item>
+        <item>@drawable/ci_perm</item>
+        <item>@drawable/ci_rostov_na_donu</item>
+        <item>@drawable/ci_ryazan</item>
+        <item>@drawable/ci_saint_petersburg</item>
+        <item>@drawable/ci_samara</item>
+        <item>@drawable/ci_saratov</item>
+        <item>@drawable/ci_togliatti</item>
+        <item>@drawable/ci_tomsk</item>
+        <item>@drawable/ci_tyumen</item>
+        <item>@drawable/ci_ulyanovsk</item>
+        <item>@drawable/ci_ufa</item>
+        <item>@drawable/ci_khabarovsk</item>
+        <item>@drawable/ci_chelyabinsk</item>
+        <item>@drawable/ci_yaroslavl</item>
+    </integer-array>
+</resources>

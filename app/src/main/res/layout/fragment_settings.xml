@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/settings_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/back_to_main_button"
+        android:layout_width="@dimen/image_size_normal"
+        android:layout_height="@dimen/image_size_normal"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@null"
+        android:contentDescription="@string/back_to_main_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_navigate_before_black_24dp" />
+
+    <TextView
+        android:id="@+id/places_screen_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text=">"
+        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/places_screen_button"
+        app:layout_constraintStart_toEndOf="@+id/places_screen_button"
+        app:layout_constraintTop_toTopOf="@+id/places_screen_button" />
+
+    <CheckBox
+        android:id="@+id/wind_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="200dp"
+        android:text="@string/wind"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/humidity_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/humidity"
+        app:layout_constraintStart_toStartOf="@+id/wind_checkbox"
+        app:layout_constraintTop_toBottomOf="@+id/wind_checkbox" />
+
+    <CheckBox
+        android:id="@+id/pressure_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/pressure"
+        app:layout_constraintStart_toStartOf="@+id/humidity_checkbox"
+        app:layout_constraintTop_toBottomOf="@+id/humidity_checkbox" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
