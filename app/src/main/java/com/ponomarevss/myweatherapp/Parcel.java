@@ -3,8 +3,6 @@ package com.ponomarevss.myweatherapp;
 import android.os.Build;
 import android.os.Parcelable;
 
-import androidx.annotation.RequiresApi;
-
 public class Parcel implements Parcelable {
 
     private String place;
@@ -12,6 +10,7 @@ public class Parcel implements Parcelable {
     private boolean windChecked;
     private boolean humidityChecked;
     private boolean pressureChecked;
+//    private String chosenFragment;
 
     public Parcel(String place, int index, boolean windChecked, boolean humidityChecked, boolean pressureChecked) {
         this.place = place;
@@ -67,25 +66,30 @@ public class Parcel implements Parcelable {
         return 0;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     public void writeToParcel(android.os.Parcel dest, int flags) {
         dest.writeString(place);
         dest.writeInt(index);
-        dest.writeBoolean(windChecked);
-        dest.writeBoolean(humidityChecked);
-        dest.writeBoolean(pressureChecked);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            dest.writeBoolean(windChecked);
+            dest.writeBoolean(humidityChecked);
+            dest.writeBoolean(pressureChecked);
+        }
     }
 
     public static final Creator<Parcel> CREATOR = new Creator<Parcel>() {
-        @RequiresApi(api = Build.VERSION_CODES.Q)
         @Override
         public Parcel createFromParcel(android.os.Parcel source) {
             String place = source.readString();
             int index = source.readInt();
-            boolean windChecked = source.readBoolean();
-            boolean humidityChecked = source.readBoolean();
-            boolean pressureChecked = source.readBoolean();
+            boolean windChecked = false;
+            boolean humidityChecked = false;
+            boolean pressureChecked = false;
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
+                windChecked = source.readBoolean();
+                humidityChecked = source.readBoolean();
+                pressureChecked = source.readBoolean();
+            }
             return new Parcel(place, index, windChecked, humidityChecked, pressureChecked);
         }
 
