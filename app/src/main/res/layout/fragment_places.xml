@@ -57,19 +57,4 @@
         android:layout_marginBottom="@dimen/margin_small"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-    <!--
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="4">
-
-            <LinearLayout
-                android:id="@+id/cities_list_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-
-        </ScrollView>
-    -->
-
 </LinearLayout>

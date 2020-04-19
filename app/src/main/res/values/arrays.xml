@@ -123,8 +123,8 @@
         <item>@drawable/ci_perm</item>
         <item>@drawable/ci_rostov_na_donu</item>
         <item>@drawable/ci_ryazan</item>
-        <item>@drawable/ci_saint_petersburg</item>
         <item>@drawable/ci_samara</item>
+        <item>@drawable/ci_saint_petersburg</item>
         <item>@drawable/ci_saratov</item>
         <item>@drawable/ci_togliatti</item>
         <item>@drawable/ci_tomsk</item>
