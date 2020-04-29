@@ -13,30 +13,25 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
-import static com.ponomarevss.myweatherapp.Constants.CHOSEN_FRAGMENT;
-import static com.ponomarevss.myweatherapp.Constants.MAIN_FRAGMENT;
-import static com.ponomarevss.myweatherapp.Constants.PARCEL;
+import static android.content.Context.MODE_PRIVATE;
+import static com.ponomarevss.myweatherapp.Constants.INDEX;
+import static com.ponomarevss.myweatherapp.Constants.PLACE;
 import static com.ponomarevss.myweatherapp.Constants.PLACE_FRAGMENT;
 import static com.ponomarevss.myweatherapp.Constants.SET_PLACE;
 
 public class PlacesFragment extends Fragment {
 
-    private Parcel parcel;
     private SettingsFragment settingsFragment;
-    private String chosenFragment;
     private TextView placeTextView;
-
+    private boolean isPrimal;
     private boolean isLandscape;
 
-    static PlacesFragment newInstance(Parcel parcel, String string) {
+    static PlacesFragment newInstance(Boolean isPrimal) {
         PlacesFragment fragment = new PlacesFragment();
         Bundle args = new Bundle();
-        args.putParcelable(PARCEL, parcel);
-        args.putString(CHOSEN_FRAGMENT, string);
+        args.putBoolean(PLACE_FRAGMENT, isPrimal);
         fragment.setArguments(args);
         return fragment;
     }
@@ -45,8 +40,7 @@ public class PlacesFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            parcel = getArguments().getParcelable(PARCEL);
-            chosenFragment = getArguments().getString(CHOSEN_FRAGMENT);
+            isPrimal = getArguments().getBoolean(PLACE_FRAGMENT);
         }
     }
 
@@ -62,21 +56,21 @@ public class PlacesFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         isLandscape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
 
-        if (chosenFragment.equals(PLACE_FRAGMENT)) {
-            replaceSettingsFragment();
+        //создание фрагмента настроек в ландшафтной ориентации
+        if (isPrimal) {
+            setSettingsFragment();
             if(!isLandscape) {
-                FragmentManager fragmentManager = getFragmentManager();
-                if(fragmentManager != null) {
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.remove(settingsFragment);
-                    fragmentTransaction.commit();
+                if(getFragmentManager() != null) {
+                    getFragmentManager()
+                            .beginTransaction()
+                            .remove(settingsFragment)
+                            .commit();
                 }
             }
         }
 
         //поле выбранного места
-        placeTextView = view.findViewById(R.id.place_set);
-        placeTextView.setText(parcel.getPlace());
+        setPlaceTextView(view);
 
         //создаем список городов
         final String[] cities = getResources().getStringArray(R.array.cities);
@@ -90,13 +84,12 @@ public class PlacesFragment extends Fragment {
         adapter.setClickListener(new CitiesRecyclerAdapter.CitiesRecyclerClickListener() {
             @Override
             public void OnItemClick(String place, int index) {
-                parcel.setPlace(place);
-                parcel.setIndex(index);
+                savePlace(place);
+                saveIndex(index);
                 placeTextView.setText(place);
 
                 if(!isLandscape) {
-                    chosenFragment = MAIN_FRAGMENT;
-                    replaceMainFragment();
+                    toMainFragment();
                 }
             }
         });
@@ -117,27 +110,51 @@ public class PlacesFragment extends Fragment {
         commitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                parcel.setPlace(placeTextView.getText().toString());
-                chosenFragment = MAIN_FRAGMENT;
-                replaceMainFragment();
+                savePlace(placeTextView.getText().toString());
+                toMainFragment();
             }
         });
     }
 
-    private void replaceMainFragment() {
-        MainFragment fragment = MainFragment.newInstance(parcel, chosenFragment);
-        FragmentManager fragmentManager = getFragmentManager();
-        if (fragmentManager == null) return;
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, fragment);
-        fragmentTransaction.commit();
+    private void setPlaceTextView(@NonNull View view) {
+        placeTextView = view.findViewById(R.id.place_set);
+        placeTextView.setText(getPlace());
     }
 
-    private void replaceSettingsFragment() {
-        settingsFragment = SettingsFragment.newInstance(parcel, chosenFragment);
-        if (getFragmentManager() == null) return;
-        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, settingsFragment);
-        fragmentTransaction.commit();
+    private void toMainFragment() {
+        MainFragment fragment = MainFragment.newInstance();
+        if (getFragmentManager() != null) {
+            getFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, fragment)
+                    .commit();
+        }
+    }
+
+    private void setSettingsFragment() {
+        settingsFragment = SettingsFragment.newInstance(false);
+        if (getFragmentManager() != null) {
+            getFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, settingsFragment)
+                    .commit();
+        }
+    }
+
+    private void savePlace(String place) {
+        if (getActivity() != null) {
+            getActivity().getPreferences(MODE_PRIVATE).edit().putString(PLACE, place).apply();
+        }
+    }
+
+    private String getPlace() {
+        assert getActivity() != null;
+        return getActivity().getPreferences(MODE_PRIVATE).getString(PLACE, SET_PLACE);
+    }
+
+    private void saveIndex(int index) {
+        if (getActivity() != null) {
+            getActivity().getPreferences(MODE_PRIVATE).edit().putInt(INDEX, index).apply();
+        }
     }
 }

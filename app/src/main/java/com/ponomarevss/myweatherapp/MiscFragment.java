@@ -73,6 +73,7 @@ public class MiscFragment extends Fragment {
                 for (int i = 0; i < city.length; i++) {
                     cityHm.put(city[i], cityUrl[i]);
                 }
+                assert getActivity() != null;
                 String url = getResources().getString(R.string.url) + cityHm.get(place);
                 Uri uri = Uri.parse(url);
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);

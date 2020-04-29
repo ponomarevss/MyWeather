@@ -10,7 +10,6 @@
         android:id="@+id/hour_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,7 +36,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/temperature_value"
-            android:textColor="@color/colorWhite"
             android:textSize="@dimen/text_size_normal" />
 
         <TextView
@@ -45,7 +43,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/temperature_unit"
-            android:textColor="@color/colorWhite"
             android:textSize="@dimen/text_size_normal" />
 
 
