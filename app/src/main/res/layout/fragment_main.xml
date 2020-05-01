@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -16,39 +17,39 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:id="@+id/settings_button"
-                android:layout_width="@dimen/image_size_normal"
-                android:layout_height="@dimen/image_size_normal"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:background="@null"
-                android:contentDescription="@string/settings_button"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_more_vert_black_24dp" />
+<!--            <ImageButton-->
+<!--                android:id="@+id/settings_button"-->
+<!--                android:layout_width="@dimen/image_size_normal"-->
+<!--                android:layout_height="@dimen/image_size_normal"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:background="@null"-->
+<!--                android:contentDescription="@string/settings_button"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:srcCompat="@drawable/ic_more_vert_black_24dp" />-->
 
             <TextView
                 android:id="@+id/place"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@+id/settings_button"
+                android:layout_marginTop="@dimen/margin_small"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/settings_button" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/weather_icon"
                 android:layout_width="@dimen/image_size_big"
                 android:layout_height="@dimen/image_size_big"
                 android:contentDescription="@string/partly_cloudy"
-                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_normal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/settings_button"
+                app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/day_partial_cloud" />
 
             <TextView
@@ -73,25 +74,17 @@
 
             <LinearLayout
                 android:id="@+id/details_layout"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_small"
-                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/temperature_value"
                 app:layout_constraintTop_toBottomOf="@+id/temperature_value">
 
 
             </LinearLayout>
-
-            <FrameLayout
-                android:id="@+id/conta"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/weather_icon" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -105,18 +98,46 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_vertical">
-
-            </LinearLayout>
+                android:gravity="center_vertical" />
 
         </HorizontalScrollView>
 
-        <FrameLayout
-            android:id="@+id/misc_fragment_container"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/misc_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        </FrameLayout>
+            <TextView
+                android:id="@+id/more_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/more_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/three_days_forecast_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/more_info"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <LinearLayout
+                android:id="@+id/last_places_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/three_days_forecast_layout"
+                tools:layout_editor_absoluteX="0dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </LinearLayout>

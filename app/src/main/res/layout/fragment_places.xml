@@ -21,7 +21,6 @@
             app:layout_constraintTop_toTopOf="@+id/locate_button" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_place"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
@@ -32,6 +31,7 @@
             app:layout_constraintTop_toBottomOf="@+id/place_set">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_place"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/input_place"
@@ -39,23 +39,25 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/locate_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_small"
             android:layout_marginTop="@dimen/margin_small"
             android:text="@string/locate"
+            app:cornerRadius="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/commit_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
             android:layout_marginEnd="@dimen/margin_small"
             android:text="@string/commit"
+            app:cornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,8 +69,6 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_marginStart="@dimen/margin_small"
-        android:layout_marginEnd="@dimen/margin_small"
-        android:layout_marginBottom="@dimen/margin_small"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        android:layout_marginEnd="@dimen/margin_small" />
 
 </LinearLayout>

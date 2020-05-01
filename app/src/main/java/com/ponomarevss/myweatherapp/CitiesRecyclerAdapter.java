@@ -17,7 +17,7 @@ public class CitiesRecyclerAdapter extends RecyclerView.Adapter<CitiesRecyclerAd
     //поле интерфейса ClickListener'а
     private CitiesRecyclerClickListener clickListener = null;
 
-    public CitiesRecyclerAdapter(String[] cities, TypedArray images) {
+    CitiesRecyclerAdapter(String[] cities, TypedArray images) {
         this.cities = cities;
         this.images = images;
     }
@@ -75,7 +75,7 @@ public class CitiesRecyclerAdapter extends RecyclerView.Adapter<CitiesRecyclerAd
     }
 
     //сеттер поля ClickListener'а
-    public void setClickListener(CitiesRecyclerClickListener clickListener) {
+    void setClickListener(CitiesRecyclerClickListener clickListener) {
         this.clickListener = clickListener;
     }
 }

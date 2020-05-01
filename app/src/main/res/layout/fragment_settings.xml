@@ -5,41 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/back_to_main_button"
-        android:layout_width="@dimen/image_size_normal"
-        android:layout_height="@dimen/image_size_normal"
-        android:layout_marginStart="@dimen/margin_small"
-        android:layout_marginTop="@dimen/margin_small"
-        android:background="@null"
-        android:contentDescription="@string/back_to_main_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_navigate_before_black_24dp" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/back_to_main_button"-->
+<!--        android:layout_width="@dimen/image_size_normal"-->
+<!--        android:layout_height="@dimen/image_size_normal"-->
+<!--        android:layout_marginStart="@dimen/margin_small"-->
+<!--        android:layout_marginTop="@dimen/margin_small"-->
+<!--        android:background="@null"-->
+<!--        android:contentDescription="@string/back_to_main_button"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/ic_navigate_before_black_24dp" />-->
 
-<!--
-    <TextView
-        android:id="@+id/places_screen_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_small"
-        android:textColor="@color/colorBlack"
-        android:textSize="@dimen/text_size_normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
--->
+<!--    <TextView-->
+<!--        android:id="@+id/places_screen_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/margin_small"-->
+<!--        android:textColor="@color/colorBlack"-->
+<!--        android:textSize="@dimen/text_size_normal"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/back_to_main_button">
+        app:layout_constraintTop_toTopOf="parent">
 
         <CheckBox
             android:id="@+id/wind_checkbox"
