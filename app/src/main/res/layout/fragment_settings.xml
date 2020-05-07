@@ -40,20 +40,44 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <CheckBox
+            android:id="@+id/coordinates_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/coordinates" />
+
+        <CheckBox
+            android:id="@+id/weather_description_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/weather_description" />
+
+        <CheckBox
+            android:id="@+id/temperature_details_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/temperature_description" />
+
+        <CheckBox
+            android:id="@+id/pressure_humidity_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/atmospheric_pressure_and_humidity" />
+
+        <CheckBox
             android:id="@+id/wind_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="@string/wind" />
-
-        <CheckBox
-            android:id="@+id/humidity_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="@string/humidity" />
 
         <CheckBox
             android:id="@+id/pressure_checkbox"

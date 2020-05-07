@@ -9,12 +9,9 @@ public interface Constants {
     String SET_PLACE = "set place";
     String WIND = "wind";
     String HUMIDITY = "humidity";
-    String  PRESSURE = "pressure";
+    String PRESSURE = "pressure";
 
-    String PARCEL = "PARCEL";
     String INDEX = "index";
     int INIT_INDEX = -1;
 
-    String SETTINGS_FRAGMENT = "settings fragment";
-    String PLACE_FRAGMENT = "place fragment";
 }

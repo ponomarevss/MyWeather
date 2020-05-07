@@ -116,7 +116,7 @@ public class MainFragment extends Fragment {
         final TypedArray icons = getResources().obtainTypedArray(R.array.detail_icon);    //создаем массив иконок
         //TODO: создаем массив величин
         final String[] measureUnits = getResources().getStringArray(R.array.measure_unit);    //создаем массив единиц измерения
-        LinearLayout detailsLayout = view.findViewById(R.id.details_layout);
+        LinearLayout detailsLayout = view.findViewById(R.id.temperature_details_layout);
         for (int i = 0; i <details.length ; i++) {
             if (details[i]) {
                 //надуваем лейаут
