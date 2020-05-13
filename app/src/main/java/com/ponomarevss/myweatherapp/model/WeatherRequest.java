@@ -1,12 +1,33 @@
 package com.ponomarevss.myweatherapp.model;
 
+import android.annotation.SuppressLint;
+import android.os.Handler;
+import android.util.Log;
+import android.view.View;
+
+import com.google.gson.Gson;
+import com.ponomarevss.myweatherapp.MainFragment;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.stream.Collectors;
+
+import javax.net.ssl.HttpsURLConnection;
+
+import static com.ponomarevss.myweatherapp.Constants.LOADING;
+import static com.ponomarevss.myweatherapp.Constants.TAG;
+
 public class WeatherRequest {
     private Clouds clouds;
     private Coord coord;
+    private int dt;
     private Main main;
     private Sys sys;
-    private Visibility visibility;
-    private Weather[] weathers;
+    private int visibility;
+    private Weather[] weather;
     private Wind wind;
 
     public Clouds getClouds() {
@@ -25,6 +46,14 @@ public class WeatherRequest {
         this.coord = coord;
     }
 
+    public int getDt() {
+        return dt;
+    }
+
+    public void setDt(int dt) {
+        this.dt = dt;
+    }
+
     public Main getMain() {
         return main;
     }
@@ -41,20 +70,20 @@ public class WeatherRequest {
         this.sys = sys;
     }
 
-    public Visibility getVisibility() {
+    public int getVisibility() {
         return visibility;
     }
 
-    public void setVisibility(Visibility visibility) {
+    public void setVisibility(int visibility) {
         this.visibility = visibility;
     }
 
-    public Weather[] getWeathers() {
-        return weathers;
+    public Weather[] getWeather() {
+        return weather;
     }
 
-    public void setWeathers(Weather[] weathers) {
-        this.weathers = weathers;
+    public void setWeather(Weather[] weather) {
+        this.weather = weather;
     }
 
     public Wind getWind() {
@@ -63,5 +92,57 @@ public class WeatherRequest {
 
     public void setWind(Wind wind) {
         this.wind = wind;
+    }
+
+    public void makeRequest(MainFragment fragment, View view, String uri) {
+        final View v = view;
+        final MainFragment f = fragment;
+        f.showMessage(v, LOADING);
+        try {
+            final URL url = new URL(uri);
+            final Handler handler = new Handler();
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    HttpsURLConnection urlConnection = null;
+                    try {
+                        urlConnection = (HttpsURLConnection) url.openConnection();
+                        urlConnection.setRequestMethod("GET");
+                        urlConnection.setReadTimeout(10000);
+                        BufferedReader in = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+                        String result = getLines(in);
+                        Gson gson = new Gson();
+                        f.setWeatherRequest(gson.fromJson(result, WeatherRequest.class));
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                f.hideMessage(v);
+                                f.init(v);
+                            }
+                        });
+                    } catch (IOException e) {
+                        f.hideMessage(v);
+                        f.showMessage(v, e.getMessage());
+                        Log.e(TAG, "Fail connection", e);
+                        e.printStackTrace();
+                    } finally {
+                        if (urlConnection != null) {
+                            urlConnection.disconnect();
+                        }
+                    }
+                }
+            }).start();
+        } catch (MalformedURLException e) {
+            f.hideMessage(v);
+            f.showMessage(v, e.getMessage());
+            Log.e(TAG, "Fail URI", e);
+            e.printStackTrace();
+        }
+
+    }
+
+    @SuppressLint("NewApi")
+    private String getLines(BufferedReader in) {
+        return in.lines().collect(Collectors.joining("\n"));
     }
 }

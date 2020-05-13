@@ -29,8 +29,8 @@
                 android:textAllCaps="true"
                 android:textColor="@color/colorWhite"
                 android:textColorHighlight="@color/colorBlack"
-                android:textSize="25sp"
                 android:textStyle="bold"
+                android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -41,8 +41,7 @@
                 android:id="@+id/coordinates_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingTop="@dimen/margin_small"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/place"
@@ -53,39 +52,43 @@
                 android:id="@+id/weather_icon"
                 android:layout_width="@dimen/image_size_big"
                 android:layout_height="@dimen/image_size_big"
-                android:contentDescription="@string/partly_cloudy"
                 android:layout_marginTop="@dimen/margin_small"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.2"
+                android:contentDescription="@string/partly_cloudy"
+                app:layout_constraintEnd_toStartOf="@+id/temperature_value"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/coordinates_layout"
-                tools:srcCompat="@drawable/day_partial_cloud" />
+                tools:srcCompat="@drawable/wi_50d" />
 
             <TextView
                 android:id="@+id/temperature_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_normal"
-                android:text="@string/temperature_value"
                 android:textSize="@dimen/text_size_big"
-                app:layout_constraintStart_toEndOf="@+id/weather_icon"
+                app:layout_constraintEnd_toStartOf="@+id/temperature_unit"
                 app:layout_constraintTop_toTopOf="@+id/weather_icon" />
 
             <TextView
                 android:id="@+id/temperature_unit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/temperature_unit"
                 android:textSize="@dimen/text_size_big"
-                app:layout_constraintStart_toEndOf="@+id/temperature_value"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/temperature_value" />
 
             <TextView
                 android:id="@+id/weather_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_small"
-                app:layout_constraintStart_toStartOf="@+id/temperature_value"
+                android:shadowColor="@color/colorBlack"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textColorHighlight="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/temperature_unit"
                 app:layout_constraintTop_toBottomOf="@+id/temperature_value"
                 tools:layout_height="20dp"
                 tools:layout_width="150dp" />
@@ -95,13 +98,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="@dimen/margin_small"
                 android:paddingTop="@dimen/margin_small"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/weather_icon"
+                app:layout_constraintEnd_toEndOf="@+id/temperature_unit"
+                app:layout_constraintTop_toBottomOf="@+id/weather_description"
                 tools:layout_height="70dp"
-                tools:layout_width="200dp" />
+                tools:layout_width="70dp" />
 
             <LinearLayout
                 android:id="@+id/pressure_humidity_layout"
@@ -143,13 +144,13 @@
                 android:id="@+id/sun_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
                 android:orientation="vertical"
                 android:paddingTop="@dimen/margin_small"
-                android:layout_marginBottom="@dimen/margin_small"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/visibility_layout"
+                app:layout_constraintTop_toBottomOf="@+id/wind_layout"
                 tools:layout_height="40dp"
                 tools:layout_width="200dp" />
 
@@ -175,10 +176,21 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
                 android:id="@+id/more_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_small"
                 android:text="@string/more_info"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.9"

@@ -5,31 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<!--    <ImageButton-->
-<!--        android:id="@+id/back_to_main_button"-->
-<!--        android:layout_width="@dimen/image_size_normal"-->
-<!--        android:layout_height="@dimen/image_size_normal"-->
-<!--        android:layout_marginStart="@dimen/margin_small"-->
-<!--        android:layout_marginTop="@dimen/margin_small"-->
-<!--        android:background="@null"-->
-<!--        android:contentDescription="@string/back_to_main_button"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:srcCompat="@drawable/ic_navigate_before_black_24dp" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/places_screen_button"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="@dimen/margin_small"-->
-<!--        android:textColor="@color/colorBlack"-->
-<!--        android:textSize="@dimen/text_size_normal"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/checkboxes_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -47,13 +24,13 @@
             android:paddingBottom="10dp"
             android:text="@string/coordinates" />
 
-        <CheckBox
-            android:id="@+id/weather_description_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="@string/weather_description" />
+<!--        <CheckBox-->
+<!--            android:id="@+id/weather_description_checkbox"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:paddingTop="10dp"-->
+<!--            android:paddingBottom="10dp"-->
+<!--            android:text="@string/weather_description" />-->
 
         <CheckBox
             android:id="@+id/temperature_details_checkbox"
@@ -61,7 +38,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="@string/temperature_description" />
+            android:text="@string/temperature_details" />
 
         <CheckBox
             android:id="@+id/pressure_humidity_checkbox"
@@ -72,20 +49,28 @@
             android:text="@string/atmospheric_pressure_and_humidity" />
 
         <CheckBox
+            android:id="@+id/visibility_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/visibility" />
+
+        <CheckBox
             android:id="@+id/wind_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="@string/wind" />
+            android:text="@string/wind_speed_and_direction" />
 
         <CheckBox
-            android:id="@+id/pressure_checkbox"
+            android:id="@+id/sun_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="@string/pressure" />
+            android:text="@string/sunrise_and_sunset" />
 
     </LinearLayout>
 
@@ -95,8 +80,8 @@
         android:layout_height="wrap_content"
         android:text="@string/dark_theme"
         android:layout_marginTop="@dimen/margin_normal"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        app:layout_constraintStart_toStartOf="@+id/checkboxes_layout"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxes_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

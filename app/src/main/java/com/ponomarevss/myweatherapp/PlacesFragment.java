@@ -100,7 +100,7 @@ public class PlacesFragment extends Fragment {
             }
         });
 
-        //поле ввода текста
+        //поле ввода текста. заглушка
         final TextInputEditText textInputEditText = view.findViewById(R.id.input_place);
         textInputEditText.addTextChangedListener(new TextWatcher() {
             @Override

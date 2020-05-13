@@ -16,7 +16,20 @@ import static com.ponomarevss.myweatherapp.Constants.INIT_INDEX;
 
 public class MainActivity extends BaseActivity {
 
-    private BottomNavigationView.OnNavigationItemSelectedListener bottomMenuListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.nav_view);
+        bottomNavigationView.setOnNavigationItemSelectedListener(bottomMenuListener);
+        if (savedInstanceState == null) {
+            bottomNavigationView.setSelectedItemId(R.id.navigation_home);
+        }
+        setBackgroundView();
+
+    }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener bottomMenuListener =  new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
@@ -33,7 +46,7 @@ public class MainActivity extends BaseActivity {
                             .beginTransaction()
                             .replace(R.id.fragment_container, placesFragment)
                             .commit();
-                        return true;
+                    return true;
                 case R.id.navigation_settings:
                     SettingsFragment settingsFragment = SettingsFragment.newInstance();
                     getSupportFragmentManager()
@@ -45,47 +58,6 @@ public class MainActivity extends BaseActivity {
             return false;
         }
     };
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        BottomNavigationView bottomNavigationView = findViewById(R.id.nav_view);
-        bottomNavigationView.setOnNavigationItemSelectedListener(bottomMenuListener);
-        if (savedInstanceState == null) {
-            bottomNavigationView.setSelectedItemId(R.id.navigation_home);
-        }
-        setBackgroundView();
-
-/*
-        if (savedInstanceState != null) return;
-        MainFragment fragment = MainFragment.newInstance();
-
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, fragment);
-        fragmentTransaction.commit();
-
-        //переход на фрагмент настроек
-        final ImageButton settingsImageButton = view.findViewById(R.id.settings_button);
-        settingsImageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                background.setVisibility(View.GONE);
-                toSettingsFragment();
-            }
-        });
-
-        //переход на фрагмент задания места
-        placeTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                background.setVisibility(View.GONE);
-                toPlacesFragment();
-            }
-        });
-*/
-
-    }
 
     private int getBackgroundIndex() {
         return getPreferences(MODE_PRIVATE).getInt(INDEX, INIT_INDEX);
@@ -102,4 +74,11 @@ public class MainActivity extends BaseActivity {
         background.setVisibility(View.VISIBLE);
         images.recycle();
     }
+
+//    public void showMessage(View view, String s) {
+//        TextView messageView = view.findViewById(R.id.message);
+//        messageView.setVisibility(View.VISIBLE);
+//        messageView.setText(s);
+//    }
+
 }
