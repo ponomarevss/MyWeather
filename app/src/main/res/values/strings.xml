@@ -1,4 +1,4 @@
-<resources>
+ <resources>
     <string name="app_name">Weather</string>
     <string name="place">set place</string>
     <string name="temperature_value">-88</string>
@@ -19,10 +19,12 @@
     <string name="back_to_settings_button">back_to_settings_button</string>
     <string name="locate">locate</string>
     <string name="city">city</string>
+    <string name="loading">loading…</string>
+    <string name="failed_to_get_data">failed to get data</string>
+
 
     <string name="places_screen_button">%s ></string>
     <string name="url">https://openweathermap.org/city/</string>
-    <!--    <string name="url">https://yandex.ru/pogoda/</string>-->
 
     <string name="commit">commit</string>
     <string name="city_image">city image</string>

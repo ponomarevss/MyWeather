@@ -64,24 +64,7 @@ public class MainFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        /*
-         *
-         * при создании главного фрагмента:
-         *
-         * если savedInstanceState == null, проверяем последнее обновление погоды по текущему месту
-         * если savedInstanceState != null, проверяем соответствие места и последнее обновление
-         * если надо обновить данные (сменилось место или прошло время), выполняем запрос на сервер
-         *
-         * после чего заполняем данными фрагмент
-         *
-         * */
-
         weatherRequest.makeRequest(this, view, String.format(WEATHER_URL + WEATHER_API_KEY, getCityId()));
-
-        //тест массива координат получаем координаты
-//        float lat = Float.parseFloat(getResources().getStringArray(R.array.cities_coord)[0].split("\\s")[0]);
-//        float lon = Float.parseFloat(getResources().getStringArray(R.array.cities_coord)[0].split("\\s")[1]);
-//        Snackbar.make(view, lat + "\n" + lon, Snackbar.LENGTH_INDEFINITE).show();
 
     }
 

@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.google.gson.Gson;
 import com.ponomarevss.myweatherapp.MainFragment;
+import com.ponomarevss.myweatherapp.R;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,7 +18,6 @@ import java.util.stream.Collectors;
 
 import javax.net.ssl.HttpsURLConnection;
 
-import static com.ponomarevss.myweatherapp.Constants.LOADING;
 import static com.ponomarevss.myweatherapp.Constants.TAG;
 
 public class WeatherRequest {
@@ -97,7 +97,7 @@ public class WeatherRequest {
     public void makeRequest(MainFragment fragment, View view, String uri) {
         final View v = view;
         final MainFragment f = fragment;
-        f.showMessage(v, LOADING);
+        f.showMessage(v, f.getString(R.string.loading));
         try {
             final URL url = new URL(uri);
             final Handler handler = new Handler();
@@ -120,9 +120,14 @@ public class WeatherRequest {
                                 f.init(v);
                             }
                         });
-                    } catch (IOException e) {
-                        f.hideMessage(v);
-                        f.showMessage(v, e.getMessage());
+                    } catch (final IOException e) {
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                f.hideMessage(v);
+                                f.showMessage(v, f.getString(R.string.failed_to_get_data));
+                            }
+                        });
                         Log.e(TAG, "Fail connection", e);
                         e.printStackTrace();
                     } finally {
@@ -133,8 +138,6 @@ public class WeatherRequest {
                 }
             }).start();
         } catch (MalformedURLException e) {
-            f.hideMessage(v);
-            f.showMessage(v, e.getMessage());
             Log.e(TAG, "Fail URI", e);
             e.printStackTrace();
         }
