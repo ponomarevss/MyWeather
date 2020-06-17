@@ -74,14 +74,14 @@
 
     </LinearLayout>
 
-    <Switch
-        android:id="@+id/dark_theme_switch"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="@string/dark_theme"
-        android:layout_marginTop="@dimen/margin_normal"
-        app:layout_constraintStart_toStartOf="@+id/checkboxes_layout"
-        app:layout_constraintTop_toBottomOf="@+id/checkboxes_layout" />
+<!--    <Switch-->
+<!--        android:id="@+id/dark_theme_switch"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/dark_theme"-->
+<!--        android:layout_marginTop="@dimen/margin_normal"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/checkboxes_layout"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/checkboxes_layout" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

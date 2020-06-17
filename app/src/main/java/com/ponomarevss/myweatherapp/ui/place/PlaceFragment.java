@@ -24,14 +24,9 @@ public class PlaceFragment extends Fragment {
 
     private TextView placeTextView;
 
-    public static PlaceFragment newInstance() {
-        return new PlaceFragment();
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_place, container, false);
     }
 

@@ -1599,7 +1599,6 @@ id coordinator
 id custom
 id customPanel
 id cut
-id dark_theme_switch
 id date_picker_actions
 id decor_content_parent
 id default_activity_button
@@ -1625,7 +1624,6 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id fab
 id fade
 id fill
 id fill_horizontal
@@ -1635,7 +1633,6 @@ id filter_chip
 id fitToContents
 id fixed
 id forever
-id fragment_container
 id ghost_view
 id ghost_view_holder
 id gone
@@ -1811,8 +1808,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
-id text_gallery
-id text_home
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
@@ -1908,9 +1903,8 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
-layout activity_main2
-layout app_bar_main2
-layout content_main2
+layout app_bar_main
+layout content_main
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1928,9 +1922,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout detail_layout
-layout fragment_gallery
 layout fragment_history
-layout fragment_home
 layout fragment_main
 layout fragment_place
 layout fragment_settings
@@ -1962,7 +1954,7 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
-layout nav_header_main2
+layout nav_header_main
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -1996,9 +1988,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
-menu activity_main2_drawer
-menu bottom_nav_menu
-menu main2
+menu activity_main_drawer
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation

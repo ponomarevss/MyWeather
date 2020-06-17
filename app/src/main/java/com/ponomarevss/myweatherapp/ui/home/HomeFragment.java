@@ -42,11 +42,6 @@ import static com.ponomarevss.myweatherapp.Constants.WIND_SPEED_AND_DIRECTION;
 public class HomeFragment extends Fragment {
 
     private WeatherRequest weatherRequest = new WeatherRequest();
-//    private HomeViewModel homeViewModel;
-
-//    static HomeFragment newInstance() {
-//        return new HomeFragment();
-//    }
 
     public void setWeatherRequest(WeatherRequest weatherRequest) {
         this.weatherRequest = weatherRequest;
@@ -54,18 +49,7 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_main, container, false);
-//        homeViewModel =
-//                ViewModelProviders.of(this).get(HomeViewModel.class);
-//        View root = inflater.inflate(R.layout.fragment_home, container, false);
-//        final TextView textView = root.findViewById(R.id.text_home);
-//        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-//            }
-//        });
-        return root;
+        return inflater.inflate(R.layout.fragment_main, container, false);
     }
 
     @Override
@@ -90,7 +74,6 @@ public class HomeFragment extends Fragment {
         showWindView(view);
         showSunView(view);
         goToBrowserButton(view);
-//        addNewItemToHistory(view);
     }
 
     public void showMessage(View view, String s) {
@@ -103,36 +86,6 @@ public class HomeFragment extends Fragment {
         TextView messageView = view.findViewById(R.id.message);
         messageView.setVisibility(View.GONE);
     }
-
-//    private void addNewItemToHistory(@NonNull View view) {
-//        String place = ((TextView) view.findViewById(R.id.place)).getText().toString();
-//        String temperature = ((TextView) view.findViewById(R.id.temperature_value)).getText().toString();
-//        Log.d("SUSFU", place + " --- " + temperature);
-//
-//        String string = Objects.requireNonNull(getActivity())         // достаем сет стрингов из ШП
-//                .getPreferences(MODE_PRIVATE)
-//                .getString("history", "");
-//
-//        ArrayList<String> list = new ArrayList<>(Arrays.asList(string.split("\n")));                // преобразуем его в лист
-//
-//        for (String item : list) {
-//            String[] cityAndTemperature = item.split("\\s");
-//            if (cityAndTemperature.length > 0 && cityAndTemperature[0].equals(place)) list.remove(item); // удаляем повтор если есть в истории
-//        }
-//        list.add(0, place + " " + temperature);
-//        if (list.size() > 10) list.remove(list.size() - 1);                        // хардкодим максимальную длину истории. убираем последнюю запись истории
-//        for (String item :
-//                list) {
-//            Log.d("SUSFU", "addNewItemToHistory: " + item);
-//        }
-//        string =  place + " " + temperature + "\n" + string;                                // присваиваем сету обновленный лист
-//
-//        Objects.requireNonNull(getActivity())                           // отправляем в ШП
-//                .getPreferences(MODE_PRIVATE)
-//                .edit()
-//                .putString("history", string)
-//                .apply();
-//    }
 
     private void showWeatherIconView(View view) {
         ImageView weatherIcon = view.findViewById(R.id.weather_icon);
@@ -261,7 +214,7 @@ public class HomeFragment extends Fragment {
                 .getInt(INDEX, INIT_INDEX);
     }
 
-    void setBackgroundView(View view) {
+    private void setBackgroundView(View view) {
         ImageView background = view.findViewById(R.id.background);
         TypedArray images = getResources().obtainTypedArray(R.array.city_images);
         if (getBackgroundIndex() == INIT_INDEX) {
@@ -272,6 +225,4 @@ public class HomeFragment extends Fragment {
         background.setVisibility(View.VISIBLE);
         images.recycle();
     }
-
-
 }

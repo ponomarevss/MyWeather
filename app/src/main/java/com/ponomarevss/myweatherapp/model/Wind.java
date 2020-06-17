@@ -8,15 +8,15 @@ public class Wind {
         return speed;
     }
 
-    public void setSpeed(float speed) {
-        this.speed = speed;
-    }
+//    public void setSpeed(float speed) {
+//        this.speed = speed;
+//    }
 
     public int getDeg() {
         return deg;
     }
 
-    public void setDeg(int deg) {
-        this.deg = deg;
-    }
+//    public void setDeg(int deg) {
+//        this.deg = deg;
+//    }
 }

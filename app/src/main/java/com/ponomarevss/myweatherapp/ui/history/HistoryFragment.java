@@ -15,22 +15,9 @@ import com.ponomarevss.myweatherapp.R;
 
 public class HistoryFragment extends Fragment {
 
-//    private HistoryViewModel historyViewModel;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_history, container, false);
-//        historyViewModel =
-//                ViewModelProviders.of(this).get(HistoryViewModel.class);
-//        View root = inflater.inflate(R.layout.fragment_history, container, false);
-//        final TextView textView = root.findViewById(R.id.text_slideshow);
-//        historyViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String[]>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-//            }
-//        });
-        return root;
+        return inflater.inflate(R.layout.fragment_history, container, false);
     }
 
     @Override

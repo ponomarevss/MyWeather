@@ -97,14 +97,14 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\watch\.gradle\
 		ADDED from C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
 		ADDED from C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:13:9-68
-activity#com.ponomarevss.myweatherapp.Main2Activity
+activity#com.ponomarevss.myweatherapp.MainActivity
 ADDED from C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:14:9-25:20
 	android:label
 		ADDED from C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:16:13-57
 	android:theme
 		ADDED from C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:17:13-47
 	android:name
-		ADDED from C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:15:13-42
+		ADDED from C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:15:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN

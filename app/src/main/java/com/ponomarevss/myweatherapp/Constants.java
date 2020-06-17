@@ -9,7 +9,6 @@ public interface Constants {
     String SET_PLACE = "set place";
 
     //константы для shared preferences
-    String NAMED_SHARED_PREFERENCE = "named shared preference";
     String INDEX = "index";
     String COORDINATES = "coordinates";
     String WEATHER_DESCRIPTION = "weather description";

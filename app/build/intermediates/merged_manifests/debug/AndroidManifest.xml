@@ -21,7 +21,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
         <activity
-            android:name="com.ponomarevss.myweatherapp.Main2Activity"
+            android:name="com.ponomarevss.myweatherapp.MainActivity"
             android:label="@string/title_activity_main2"
             android:theme="@style/NoActionBar" >
 

@@ -30,69 +30,69 @@ public class WeatherRequest {
     private Weather[] weather;
     private Wind wind;
 
-    public Clouds getClouds() {
-        return clouds;
-    }
+//    public Clouds getClouds() {
+//        return clouds;
+//    }
 
-    public void setClouds(Clouds clouds) {
-        this.clouds = clouds;
-    }
+//    public void setClouds(Clouds clouds) {
+//        this.clouds = clouds;
+//    }
 
     public Coord getCoord() {
         return coord;
     }
 
-    public void setCoord(Coord coord) {
-        this.coord = coord;
-    }
+//    public void setCoord(Coord coord) {
+//        this.coord = coord;
+//    }
 
-    public int getDt() {
-        return dt;
-    }
+//    public int getDt() {
+//        return dt;
+//    }
 
-    public void setDt(int dt) {
-        this.dt = dt;
-    }
+//    public void setDt(int dt) {
+//        this.dt = dt;
+//    }
 
     public Main getMain() {
         return main;
     }
 
-    public void setMain(Main main) {
-        this.main = main;
-    }
+//    public void setMain(Main main) {
+//        this.main = main;
+//    }
 
     public Sys getSys() {
         return sys;
     }
 
-    public void setSys(Sys sys) {
-        this.sys = sys;
-    }
+//    public void setSys(Sys sys) {
+//        this.sys = sys;
+//    }
 
     public int getVisibility() {
         return visibility;
     }
 
-    public void setVisibility(int visibility) {
-        this.visibility = visibility;
-    }
+//    public void setVisibility(int visibility) {
+//        this.visibility = visibility;
+//    }
 
     public Weather[] getWeather() {
         return weather;
     }
 
-    public void setWeather(Weather[] weather) {
-        this.weather = weather;
-    }
+//    public void setWeather(Weather[] weather) {
+//        this.weather = weather;
+//    }
 
     public Wind getWind() {
         return wind;
     }
 
-    public void setWind(Wind wind) {
-        this.wind = wind;
-    }
+//    public void setWind(Wind wind) {
+//        this.wind = wind;
+//    }
 
     public void makeRequest(HomeFragment fragment, View view, String uri) {
         final View v = view;
