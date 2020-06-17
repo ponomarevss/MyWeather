@@ -1665,6 +1665,7 @@ id main_part_layout
 id masked
 id media_actions
 id message
+id message_view
 id middle
 id mini
 id misc_container
@@ -1903,6 +1904,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout alert_message
 layout app_bar_main
 layout content_main
 layout custom_dialog
@@ -2058,6 +2060,7 @@ string icon_content_description
 string input_place
 string last_places
 string latitude_field
+string lets_go_to_web
 string loading
 string locate
 string longitude_field
@@ -2108,6 +2111,7 @@ string nav_header_subtitle
 string nav_header_title
 string navigation_drawer_close
 string navigation_drawer_open
+string no
 string partly_cloudy
 string password_toggle_content_description
 string path_password_eye
@@ -2132,7 +2136,7 @@ string temperature_details
 string temperature_unit
 string temperature_value
 string time_unit
-string title_activity_main2
+string title_activity_main
 string title_home
 string title_settings
 string url
@@ -2145,6 +2149,7 @@ string wind_direction_unit
 string wind_speed_and_direction
 string wind_speed_field
 string wind_speed_unit
+string yes
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

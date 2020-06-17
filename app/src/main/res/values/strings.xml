@@ -70,7 +70,7 @@
     <string name="time_unit">sec</string>
 
 
-    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_main">Weather</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -85,6 +85,9 @@
     <string name="menu_history">History</string>
 
     <string name="home_second">Home Second</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="lets_go_to_web">Let\'s go to web!</string>
 
 
 </resources>

@@ -1,6 +1,7 @@
 package com.ponomarevss.myweatherapp.ui.home;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.TypedArray;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.ponomarevss.myweatherapp.R;
@@ -76,16 +78,16 @@ public class HomeFragment extends Fragment {
         goToBrowserButton(view);
     }
 
-    public void showMessage(View view, String s) {
-        TextView messageView = view.findViewById(R.id.message);
-        messageView.setVisibility(View.VISIBLE);
-        messageView.setText(s);
-    }
-
-    public void hideMessage(View view) {
-        TextView messageView = view.findViewById(R.id.message);
-        messageView.setVisibility(View.GONE);
-    }
+//    public void showMessage(View view, String s) {
+//        TextView messageView = view.findViewById(R.id.message);
+//        messageView.setVisibility(View.VISIBLE);
+//        messageView.setText(s);
+//    }
+//
+//    public void hideMessage(View view) {
+//        TextView messageView = view.findViewById(R.id.message);
+//        messageView.setVisibility(View.GONE);
+//    }
 
     private void showWeatherIconView(View view) {
         ImageView weatherIcon = view.findViewById(R.id.weather_icon);
@@ -171,22 +173,38 @@ public class HomeFragment extends Fragment {
         moreInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String[] city = getResources().getStringArray(R.array.cities);
-                String[] cityUrl = getResources().getStringArray(R.array.cities_id);
-                Map<String, String> cityHm= new HashMap<>();
-                for (int i = 0; i < city.length; i++) {
-                    cityHm.put(city[i], cityUrl[i]);
-                }
-                assert getActivity() != null;
-                String url = getResources().getString(R.string.url) + cityHm.get(getPlace());
-                Uri uri = Uri.parse(url);
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                Context context = getContext();
-                if (context == null) return;
-                ActivityInfo activityInfo = intent.resolveActivityInfo(context.getPackageManager(), intent.getFlags());
-                if (activityInfo != null) {
-                    startActivity(intent);
-                }
+                AlertDialog.Builder builder = new AlertDialog.Builder(Objects.requireNonNull(getActivity()));
+                builder.setMessage(R.string.lets_go_to_web)
+                        .setCancelable(true)
+                        .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //не делать ничего
+                            }
+                        })
+                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                String[] city = getResources().getStringArray(R.array.cities);
+                                String[] cityUrl = getResources().getStringArray(R.array.cities_id);
+                                Map<String, String> cityHm= new HashMap<>();
+                                for (int i = 0; i < city.length; i++) {
+                                    cityHm.put(city[i], cityUrl[i]);
+                                }
+                                assert getActivity() != null;
+                                String url = getResources().getString(R.string.url) + cityHm.get(getPlace());
+                                Uri uri = Uri.parse(url);
+                                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                Context context = getContext();
+                                if (context == null) return;
+                                ActivityInfo activityInfo = intent.resolveActivityInfo(context.getPackageManager(), intent.getFlags());
+                                if (activityInfo != null) {
+                                    startActivity(intent);
+                                }
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
     }

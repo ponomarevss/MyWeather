@@ -100,7 +100,7 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\watch\.gradle\
 activity#com.ponomarevss.myweatherapp.MainActivity
 ADDED from C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:14:9-25:20
 	android:label
-		ADDED from C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:16:13-57
+		ADDED from C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:16:13-56
 	android:theme
 		ADDED from C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:17:13-47
 	android:name
