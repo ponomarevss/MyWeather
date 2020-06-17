@@ -1,0 +1,78 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ponomarevss.myweatherapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="22"
+8-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <application
+13-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:7:5-35:19
+14        android:allowBackup="true"
+14-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:8:9-35
+15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+15-->[androidx.core:core:1.1.0] C:\Users\watch\.gradle\caches\transforms-2\files-2.1\da95e0dd41fd0c634661df2a0f122634\core-1.1.0\AndroidManifest.xml:24:18-86
+16        android:debuggable="true"
+17        android:icon="@mipmap/ic_launcher"
+17-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:9:9-43
+18        android:label="@string/app_name"
+18-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:10:9-41
+19        android:roundIcon="@mipmap/ic_launcher_round"
+19-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:11:9-54
+20        android:supportsRtl="true"
+20-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:12:9-35
+21        android:testOnly="true"
+22        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
+22-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:13:9-68
+23        <activity
+23-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:14:9-25:20
+24            android:name="com.ponomarevss.myweatherapp.Main2Activity"
+24-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:15:13-42
+25            android:label="@string/title_activity_main2"
+25-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:16:13-57
+26            android:theme="@style/NoActionBar" >
+26-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:17:13-47
+27
+28            <!-- android:screenOrientation="portrait"> -->
+29            <intent-filter>
+29-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:19:13-23:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:20:17-69
+30-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:20:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:22:17-77
+32-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:22:27-74
+33            </intent-filter>
+34        </activity>
+35        <!-- <activity -->
+36        <!-- android:name=".MainActivity" -->
+37        <!-- android:screenOrientation="portrait"> -->
+38        <!-- <intent-filter> -->
+39        <!-- <action android:name="android.intent.action.MAIN" /> -->
+40
+41
+42        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+43        <!-- </intent-filter> -->
+44        <!-- </activity> -->
+45        <provider
+45-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\watch\.gradle\caches\transforms-2\files-2.1\80a00d5735d69f4f399457d9ccd7230d\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
+46            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+46-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\watch\.gradle\caches\transforms-2\files-2.1\80a00d5735d69f4f399457d9ccd7230d\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
+47            android:authorities="com.ponomarevss.myweatherapp.lifecycle-process"
+47-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\watch\.gradle\caches\transforms-2\files-2.1\80a00d5735d69f4f399457d9ccd7230d\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
+48            android:exported="false"
+48-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\watch\.gradle\caches\transforms-2\files-2.1\80a00d5735d69f4f399457d9ccd7230d\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
+49            android:multiprocess="true" />
+49-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\watch\.gradle\caches\transforms-2\files-2.1\80a00d5735d69f4f399457d9ccd7230d\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
+50    </application>
+51
+52</manifest>

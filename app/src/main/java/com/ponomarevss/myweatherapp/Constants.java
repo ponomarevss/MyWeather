@@ -23,7 +23,6 @@ public interface Constants {
     //константы для запросов
     String TAG = "weather";
     String WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather?id=%s&units=metric&appid=";
-    String WEATHER_API_KEY = "024d1b99366c70a5b4bd878066cb63830";
+    String WEATHER_API_KEY = "024d1b99366c70a5b4bd878066cb6383";
 
-    String LOADING = "loading...";
-}
+ }

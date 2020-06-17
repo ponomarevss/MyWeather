@@ -6,8 +6,8 @@ import android.util.Log;
 import android.view.View;
 
 import com.google.gson.Gson;
-import com.ponomarevss.myweatherapp.MainFragment;
 import com.ponomarevss.myweatherapp.R;
+import com.ponomarevss.myweatherapp.ui.home.HomeFragment;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -94,9 +94,9 @@ public class WeatherRequest {
         this.wind = wind;
     }
 
-    public void makeRequest(MainFragment fragment, View view, String uri) {
+    public void makeRequest(HomeFragment fragment, View view, String uri) {
         final View v = view;
-        final MainFragment f = fragment;
+        final HomeFragment f = fragment;
         f.showMessage(v, f.getString(R.string.loading));
         try {
             final URL url = new URL(uri);
