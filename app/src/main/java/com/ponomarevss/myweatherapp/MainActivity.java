@@ -1,7 +1,10 @@
 package com.ponomarevss.myweatherapp;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -15,6 +18,7 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    public AlertDialog alertDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,4 +44,20 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    public void showAlertMessage(String s) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        final View contentView = getLayoutInflater().inflate(R.layout.alert_message, null);
+        TextView message = contentView.findViewById(R.id.message_view);
+        message.setText(s);
+        builder.setView(contentView);
+        alertDialog = builder.create();
+        alertDialog.show();
+    }
+
+    public void hideAlertMessage() {
+        alertDialog.hide();
+    }
 }
+
+

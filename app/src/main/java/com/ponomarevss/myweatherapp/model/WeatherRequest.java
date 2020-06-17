@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.google.gson.Gson;
+import com.ponomarevss.myweatherapp.MainActivity;
 import com.ponomarevss.myweatherapp.R;
 import com.ponomarevss.myweatherapp.ui.home.HomeFragment;
 
@@ -14,6 +15,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 import javax.net.ssl.HttpsURLConnection;
@@ -97,7 +99,8 @@ public class WeatherRequest {
     public void makeRequest(HomeFragment fragment, View view, String uri) {
         final View v = view;
         final HomeFragment f = fragment;
-        f.showMessage(v, f.getString(R.string.loading));
+        ((MainActivity) Objects.requireNonNull(f.getActivity())).showAlertMessage(f.getString(R.string.loading));
+//        f.showMessage(v, f.getString(R.string.loading));
         try {
             final URL url = new URL(uri);
             final Handler handler = new Handler();
@@ -116,7 +119,8 @@ public class WeatherRequest {
                         handler.post(new Runnable() {
                             @Override
                             public void run() {
-                                f.hideMessage(v);
+                                ((MainActivity) Objects.requireNonNull(f.getActivity())).hideAlertMessage();
+//                                f.hideMessage(v);
                                 f.init(v);
                             }
                         });
@@ -124,8 +128,10 @@ public class WeatherRequest {
                         handler.post(new Runnable() {
                             @Override
                             public void run() {
-                                f.hideMessage(v);
-                                f.showMessage(v, f.getString(R.string.failed_to_get_data));
+                                ((MainActivity) Objects.requireNonNull(f.getActivity())).hideAlertMessage();
+//                                f.hideMessage(v);
+                                ((MainActivity) Objects.requireNonNull(f.getActivity())).showAlertMessage(f.getString(R.string.failed_to_get_data));
+//                                f.showMessage(v, f.getString(R.string.failed_to_get_data));
                             }
                         });
                         Log.e(TAG, "Fail connection", e);

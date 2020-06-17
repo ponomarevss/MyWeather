@@ -36,8 +36,8 @@
 23-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:14:9-25:20
 24            android:name="com.ponomarevss.myweatherapp.MainActivity"
 24-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:15:13-41
-25            android:label="@string/title_activity_main2"
-25-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:16:13-57
+25            android:label="@string/title_activity_main"
+25-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:16:13-56
 26            android:theme="@style/NoActionBar" >
 26-->C:\Users\watch\AndroidStudioProjects\MyWeatherApp\app\src\main\AndroidManifest.xml:17:13-47
 27
