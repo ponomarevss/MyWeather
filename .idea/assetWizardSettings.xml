@@ -33,8 +33,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_history_black_24dp" />
-                            <entry key="sourceFile" value="C:\Users\watch" />
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="outputName" value="ic_wi_01n" />
+                            <entry key="sourceFile" value="C:\Users\watch\AndroidStudioProjects\svg\wi_01n.svg" />
                           </map>
                         </option>
                       </PersistentState>

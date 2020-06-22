@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:alpha="0.1"
+        android:alpha="1"
         android:clickable="false"
         android:contentDescription="@string/background"
         android:focusable="false"
@@ -42,6 +42,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_small"
+
                     android:shadowColor="@color/colorBlack"
                     android:shadowDx="1"
                     android:shadowDy="1"
@@ -51,6 +52,7 @@
                     android:textColorHighlight="@color/colorBlack"
                     android:textStyle="bold"
                     android:textSize="25sp"
+
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -83,6 +85,16 @@
                     android:id="@+id/temperature_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+
+                    android:shadowColor="@color/colorBlack"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHighlight="@color/colorBlack"
+                    android:textStyle="bold"
+
                     android:textSize="@dimen/text_size_big"
                     app:layout_constraintEnd_toStartOf="@+id/temperature_unit"
                     app:layout_constraintTop_toTopOf="@+id/weather_icon" />
@@ -93,6 +105,16 @@
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/text_size_big"
                     android:layout_marginEnd="@dimen/margin_normal"
+
+                    android:shadowColor="@color/colorBlack"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHighlight="@color/colorBlack"
+                    android:textStyle="bold"
+
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/temperature_value" />
 
@@ -176,20 +198,6 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!--        <HorizontalScrollView-->
-            <!--            android:id="@+id/hourly_view"-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:layout_height="wrap_content">-->
-
-            <!--            <LinearLayout-->
-            <!--                android:id="@+id/hourly_layout"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:orientation="horizontal"-->
-            <!--                android:gravity="center_vertical" />-->
-
-            <!--        </HorizontalScrollView>-->
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/misc_container"
                 android:layout_width="match_parent"
@@ -212,29 +220,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/more_info"
+                    android:visibility="gone"
+
+                    android:shadowColor="@color/colorBlack"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHighlight="@color/colorBlack"
+                    android:textStyle="bold"
+
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.9"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
-                <!--            <LinearLayout-->
-                <!--                android:id="@+id/three_days_forecast_layout"-->
-                <!--                android:layout_width="match_parent"-->
-                <!--                android:layout_height="wrap_content"-->
-                <!--                android:layout_marginTop="@dimen/margin_small"-->
-                <!--                android:orientation="vertical"-->
-                <!--                app:layout_constraintTop_toBottomOf="@+id/more_info"-->
-                <!--                tools:layout_editor_absoluteX="0dp" />-->
-
-                <!--            <LinearLayout-->
-                <!--                android:id="@+id/last_places_layout"-->
-                <!--                android:layout_width="match_parent"-->
-                <!--                android:layout_height="wrap_content"-->
-                <!--                android:layout_marginTop="@dimen/margin_small"-->
-                <!--                android:orientation="vertical"-->
-                <!--                app:layout_constraintTop_toBottomOf="@+id/three_days_forecast_layout"-->
-                <!--                tools:layout_editor_absoluteX="0dp" />-->
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -243,16 +244,4 @@
     </ScrollView>
 
 </FrameLayout>
-
-<!--
-    android:shadowColor="#000"
-    android:shadowDx="1"
-    android:shadowDy="1"
-    android:shadowRadius="1"
-    android:textAllCaps="true"
-    android:textColor="#FFF"
-    android:textColorHighlight="#000"
-    android:textSize="25sp"
-    android:textStyle="bold"
--->
 
