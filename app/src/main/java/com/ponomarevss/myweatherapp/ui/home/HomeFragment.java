@@ -20,7 +20,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.ponomarevss.myweatherapp.R;
-import com.ponomarevss.myweatherapp.model.WeatherRequest;
+import com.ponomarevss.myweatherapp.RequestHandler;
+import com.ponomarevss.myweatherapp.WeatherRequest;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -37,17 +38,17 @@ import static com.ponomarevss.myweatherapp.Constants.SUNRISE_AND_SUNSET;
 import static com.ponomarevss.myweatherapp.Constants.TEMPERATURE_DETAILS;
 import static com.ponomarevss.myweatherapp.Constants.VISIBILITY;
 import static com.ponomarevss.myweatherapp.Constants.WEATHER_API_KEY;
-import static com.ponomarevss.myweatherapp.Constants.WEATHER_ICON_PREFIX;
 import static com.ponomarevss.myweatherapp.Constants.WEATHER_URL;
 import static com.ponomarevss.myweatherapp.Constants.WIND_SPEED_AND_DIRECTION;
 
 public class HomeFragment extends Fragment {
 
-    private WeatherRequest weatherRequest = new WeatherRequest();
+//    private WeatherModel weatherModel/* = new WeatherModel()*/;
+//    private RequestHandler requestHandler;
 
-    public void setWeatherRequest(WeatherRequest weatherRequest) {
-        this.weatherRequest = weatherRequest;
-    }
+//    public void setWeatherModel(WeatherModel weatherModel) {
+//        this.weatherModel = weatherModel;
+//    }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -59,101 +60,94 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         setBackgroundView(view);
         if (getCityId() != null) {
-            weatherRequest.makeRequest(this, view, String.format(WEATHER_URL + WEATHER_API_KEY, getCityId()));
+            new WeatherRequest(this, view, String.format(WEATHER_URL + WEATHER_API_KEY, getCityId()))
+                    .makeRequest();
+//            RequestHandler requestHandler = new RequestHandler(this, view, String.format(WEATHER_URL + WEATHER_API_KEY, getCityId()));
+//            weatherModel.makeRequest(this, view, String.format(WEATHER_URL + WEATHER_API_KEY, getCityId()));
         }
-
     }
 
-    public void init(@NonNull View view) {
+    public void init(@NonNull View view, RequestHandler requestHandler) {
         setPlaceView(view);
-        showCoordinatesView(view);
-        showWeatherIconView(view);
-        showTemperatureView(view);
-        showWeatherDescriptionView(view);
-        showTemperatureDetailsView(view);
-        showPressureHumidityView(view);
-        showVisibilityView(view);
-        showWindView(view);
-        showSunView(view);
+        showCoordinatesView(view, requestHandler);
+        showWeatherIconView(view, requestHandler);
+        showTemperatureView(view, requestHandler);
+        showWeatherDescriptionView(view, requestHandler);
+        showTemperatureDetailsView(view, requestHandler);
+        showPressureHumidityView(view, requestHandler);
+        showVisibilityView(view, requestHandler);
+        showWindView(view, requestHandler);
+        showSunView(view, requestHandler);
         goToBrowserButton(view);
     }
 
-//    public void showMessage(View view, String s) {
-//        TextView messageView = view.findViewById(R.id.message);
-//        messageView.setVisibility(View.VISIBLE);
-//        messageView.setText(s);
-//    }
-//
-//    public void hideMessage(View view) {
-//        TextView messageView = view.findViewById(R.id.message);
-//        messageView.setVisibility(View.GONE);
-//    }
-
-    private void showWeatherIconView(View view) {
+    private void showWeatherIconView(View view, RequestHandler requestHandler) {
         ImageView weatherIcon = view.findViewById(R.id.weather_icon);
-        String iconName = WEATHER_ICON_PREFIX + weatherRequest.getWeather()[0].getIcon();
+//        String iconName = WEATHER_ICON_PREFIX + weatherModel.getWeather()[0].getIcon();
         if (getActivity() != null) {
-            weatherIcon.setImageResource(getResources().getIdentifier(iconName, "drawable", getActivity().getPackageName()));
+            weatherIcon.setImageResource(getResources().getIdentifier(requestHandler.getIconName(),
+                    "drawable",
+                    getActivity().getPackageName()));
         }
     }
 
-    private void showSunView(View view) {
+    private void showSunView(View view, RequestHandler requestHandler) {
         if (getActivity() != null && getActivity().getPreferences(MODE_PRIVATE).getBoolean(SUNRISE_AND_SUNSET, false)) {
             LinearLayout sunLayout = view.findViewById(R.id.sun_layout);
-            makeField(sunLayout, R.string.sunrise_field, String.valueOf(weatherRequest.getSys().getSunrise()), R.string.time_unit);
-            makeField(sunLayout, R.string.sunset_field, String.valueOf(weatherRequest.getSys().getSunset()), R.string.time_unit);
+            makeField(sunLayout, R.string.sunrise_field, requestHandler.getSunrise(), R.string.time_unit);
+            makeField(sunLayout, R.string.sunset_field, requestHandler.getSunset(), R.string.time_unit);
         }
     }
 
-    private void showWindView(View view) {
+    private void showWindView(View view, RequestHandler requestHandler) {
         if (getActivity() != null && getActivity().getPreferences(MODE_PRIVATE).getBoolean(WIND_SPEED_AND_DIRECTION, false)) {
             LinearLayout windLayout = view.findViewById(R.id.wind_layout);
-            makeField(windLayout, R.string.wind_speed_field, String.valueOf(weatherRequest.getWind().getSpeed()), R.string.wind_speed_unit);
-            makeField(windLayout, R.string.wind_direction_field, String.valueOf(weatherRequest.getWind().getDeg()), R.string.wind_direction_unit);
+            makeField(windLayout, R.string.wind_speed_field, requestHandler.getWindSpeed(), R.string.wind_speed_unit);
+            makeField(windLayout, R.string.wind_direction_field, requestHandler.getWindDeg(), R.string.wind_direction_unit);
         }
     }
 
-    private void showVisibilityView(View view) {
+    private void showVisibilityView(View view, RequestHandler requestHandler) {
         if (getActivity() != null && getActivity().getPreferences(MODE_PRIVATE).getBoolean(VISIBILITY, false)) {
             LinearLayout visibilityLayout = view.findViewById(R.id.visibility_layout);
-            makeField(visibilityLayout, R.string.visibility_field, String.valueOf(weatherRequest.getVisibility()), R.string.visibility_unit);
+            makeField(visibilityLayout, R.string.visibility_field, requestHandler.getVisibility(), R.string.visibility_unit);
         }
     }
 
-    private void showPressureHumidityView(View view) {
+    private void showPressureHumidityView(View view, RequestHandler requestHandler) {
         if (getActivity() != null && getActivity().getPreferences(MODE_PRIVATE).getBoolean(PRESSURE_AND_HUMIDITY, false)) {
             LinearLayout pressureHumidityLayout = view.findViewById(R.id.pressure_humidity_layout);
-            makeField(pressureHumidityLayout, R.string.pressure_field, String.valueOf(weatherRequest.getMain().getPressure()), R.string.pressure_unit);
-            makeField(pressureHumidityLayout, R.string.humidity_field, String.valueOf(weatherRequest.getMain().getHumidity()), R.string.humidity_unit);
+            makeField(pressureHumidityLayout, R.string.pressure_field, requestHandler.getPressure(), R.string.pressure_unit);
+            makeField(pressureHumidityLayout, R.string.humidity_field, requestHandler.getHumidity(), R.string.humidity_unit);
         }
     }
 
-    private void showTemperatureDetailsView(View view) {
+    private void showTemperatureDetailsView(View view, RequestHandler requestHandler) {
         if (getActivity() != null && getActivity().getPreferences(MODE_PRIVATE).getBoolean(TEMPERATURE_DETAILS, false)) {
             LinearLayout temperatureDetailsLayout = view.findViewById(R.id.temperature_details_layout);
-            makeField(temperatureDetailsLayout, R.string.feels_like_field, String.valueOf(weatherRequest.getMain().getFeels_like()), R.string.temperature_unit);
-            makeField(temperatureDetailsLayout, R.string.temp_max_field, String.valueOf(weatherRequest.getMain().getTemp_max()), R.string.temperature_unit);
-            makeField(temperatureDetailsLayout, R.string.temp_min_field, String.valueOf(weatherRequest.getMain().getTemp_min()), R.string.temperature_unit);
+            makeField(temperatureDetailsLayout, R.string.feels_like_field, requestHandler.getTempFeels_like(), R.string.temperature_unit);
+            makeField(temperatureDetailsLayout, R.string.temp_max_field, requestHandler.getTemp_max(), R.string.temperature_unit);
+            makeField(temperatureDetailsLayout, R.string.temp_min_field, requestHandler.getTemp_min(), R.string.temperature_unit);
         }
     }
 
-    private void showTemperatureView(View view) {
+    private void showTemperatureView(View view, RequestHandler requestHandler) {
         TextView temperatureView = view.findViewById(R.id.temperature_value);
-        temperatureView.setText(String.valueOf(weatherRequest.getMain().getTemp()));
+        temperatureView.setText(requestHandler.getTemp());
         TextView temperatureUnitView = view.findViewById(R.id.temperature_unit);
         temperatureUnitView.setText(R.string.temperature_unit);
     }
 
-    private void showWeatherDescriptionView(View view) {
+    private void showWeatherDescriptionView(View view, RequestHandler requestHandler) {
         TextView weatherDescriptionView = view.findViewById(R.id.weather_description);
-        weatherDescriptionView.setText(weatherRequest.getWeather()[0].getDescription());
+        weatherDescriptionView.setText(requestHandler.getWeatherDescription());
     }
 
-    private void showCoordinatesView(View view) {
+    private void showCoordinatesView(View view, RequestHandler requestHandler) {
         if (getActivity() != null && getActivity().getPreferences(MODE_PRIVATE).getBoolean(COORDINATES, false)) {
             LinearLayout coordinatesLayout = view.findViewById(R.id.coordinates_layout);
-            makeField(coordinatesLayout, R.string.latitude_field, String.valueOf(weatherRequest.getCoord().getLat()), R.string.coordinates_unit);
-            makeField(coordinatesLayout, R.string.longitude_field, String.valueOf(weatherRequest.getCoord().getLon()), R.string.coordinates_unit);
+            makeField(coordinatesLayout, R.string.latitude_field, requestHandler.getCoordLat(), R.string.coordinates_unit);
+            makeField(coordinatesLayout, R.string.longitude_field, requestHandler.getCoordLon(), R.string.coordinates_unit);
         }
     }
 
@@ -170,6 +164,7 @@ public class HomeFragment extends Fragment {
 
     private void goToBrowserButton(@NonNull View view) {
         TextView moreInfo = view.findViewById(R.id.more_info);
+        moreInfo.setVisibility(View.VISIBLE);
         moreInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

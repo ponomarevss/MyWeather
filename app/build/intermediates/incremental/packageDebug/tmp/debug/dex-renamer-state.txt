@@ -1,4 +1,4 @@
-#Wed Jun 17 18:03:42 YEKT 2020
+#Mon Jun 22 17:38:02 YEKT 2020
 base.0=C\:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

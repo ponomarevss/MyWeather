@@ -1453,6 +1453,8 @@ drawable ic_navigate_before_black_24dp
 drawable ic_place_black_24dp
 drawable ic_room_black_24dp
 drawable ic_settings_black_24dp
+drawable ic_wi_01d
+drawable ic_wi_01n
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
