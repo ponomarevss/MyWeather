@@ -60,47 +60,6 @@ public class PlaceFragment extends Fragment {
         });
         citiesRecyclerView.setAdapter(adapter);
 
-        //кнопка определения места
-//        final MaterialButton locate = view.findViewById(R.id.locate_button);
-//        locate.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                //TODO: получить данные геолокации и установить в текущее место
-//                placeTextView.setText(SET_PLACE);
-//                Snackbar.make(view, "Определяем место", Snackbar.LENGTH_SHORT).show();
-//            }
-//        });
-
-        //принять место
-//        final MaterialButton commitButton = view.findViewById(R.id.commit_button);
-//        commitButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                savePlace(placeTextView.getText().toString());
-//            }
-//        });
-
-        //поле ввода текста. заглушка
-//        final TextInputEditText textInputEditText = view.findViewById(R.id.input_place);
-//        textInputEditText.addTextChangedListener(new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable s) {
-                //что делать здесь? обновлять поле заданного места?
-                //в качестве заглушки ставим snackBar
-//                Snackbar.make(view, Objects.requireNonNull(textInputEditText.getText()).toString(), Snackbar.LENGTH_SHORT).show();
-//            }
-//        });
-
     }
 
     private void setPlaceTextView(@NonNull View view) {

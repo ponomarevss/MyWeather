@@ -24,14 +24,6 @@
             android:paddingBottom="10dp"
             android:text="@string/coordinates" />
 
-<!--        <CheckBox-->
-<!--            android:id="@+id/weather_description_checkbox"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:paddingTop="10dp"-->
-<!--            android:paddingBottom="10dp"-->
-<!--            android:text="@string/weather_description" />-->
-
         <CheckBox
             android:id="@+id/temperature_details_checkbox"
             android:layout_width="wrap_content"
@@ -73,15 +65,6 @@
             android:text="@string/sunrise_and_sunset" />
 
     </LinearLayout>
-
-<!--    <Switch-->
-<!--        android:id="@+id/dark_theme_switch"-->
-<!--        android:layout_width="200dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="@string/dark_theme"-->
-<!--        android:layout_marginTop="@dimen/margin_normal"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/checkboxes_layout"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/checkboxes_layout" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

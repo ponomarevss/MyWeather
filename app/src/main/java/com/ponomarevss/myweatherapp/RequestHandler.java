@@ -1,78 +1,67 @@
 package com.ponomarevss.myweatherapp;
 
-import com.google.gson.Gson;
-import com.ponomarevss.myweatherapp.model.WeatherModel;
-
-import static com.ponomarevss.myweatherapp.Constants.WEATHER_ICON_PREFIX;
+import com.ponomarevss.myweatherapp.rest.entities.WeatherRequestRestModel;
 
 public class RequestHandler {
 
-    WeatherModel weatherModel;
-//    String result;
+    private WeatherRequestRestModel response;
 
-    public RequestHandler(String result) {
-//        this.result = result;
-        weatherModel = new Gson().fromJson(result, WeatherModel.class);
+    public RequestHandler(WeatherRequestRestModel response) {
+        this.response = response;
     }
 
-//    public WeatherModel getWeatherModel() {
-//        Gson gson = new Gson();
-//        weatherModel = gson.fromJson(result, WeatherModel.class);
-//        return weatherModel;
-//    }
-
-    public String getIconName() {
-        return WEATHER_ICON_PREFIX + weatherModel.getWeather()[0].getIcon();
-    }
-
-    public String getCoordLat() {
-        return String.valueOf(weatherModel.getCoord().getLat());
-    }
-
-    public String getCoordLon() {
-        return String.valueOf(weatherModel.getCoord().getLon());
-    }
-
-    public String getTemp() {
-        return String.valueOf(weatherModel.getMain().getTemp());
+    public String getIcon() {
+        return response.weather[0].icon;
     }
 
     public String getWeatherDescription() {
-        return weatherModel.getWeather()[0].getDescription();
+        return response.weather[0].description;
     }
 
-    public String getTempFeels_like() {
-        return String.valueOf(weatherModel.getMain().getFeels_like());
+    public String getCoordLat() {
+        return String.valueOf(response.coordinates.lat);
     }
-    public String getTemp_max() {
-        return String.valueOf(weatherModel.getMain().getTemp_max());
+
+    public String getCoordLon() {
+        return String.valueOf(response.coordinates.lon);
     }
-    public String getTemp_min() {
-        return String.valueOf(weatherModel.getMain().getTemp_min());
+
+    public String getTemp() {
+        return String.valueOf(response.main.temp);
+    }
+
+    public String getTempFeelsLike() {
+        return String.valueOf(response.main.feelsLike);
+    }
+    public String getTempMax() {
+        return String.valueOf(response.main.tempMax);
+    }
+    public String getTempMin() {
+        return String.valueOf(response.main.tempMin);
     }
 
     public String getPressure() {
-        return String.valueOf(weatherModel.getMain().getPressure());
+        return String.valueOf(response.main.pressure);
     }
     public String getHumidity() {
-        return String.valueOf(weatherModel.getMain().getHumidity());
+        return String.valueOf(response.main.humidity);
     }
 
     public String getSunrise() {
-        return String.valueOf(weatherModel.getSys().getSunrise());
+        return String.valueOf(response.sys.sunrise);
     }
     public String getSunset() {
-        return String.valueOf(weatherModel.getSys().getSunset());
+        return String.valueOf(response.sys.sunset);
     }
 
     public String getVisibility() {
-        return String.valueOf(weatherModel.getVisibility());
+        return String.valueOf(response.visibility);
     }
 
     public String getWindSpeed() {
-        return String.valueOf(weatherModel.getWind().getSpeed());
+        return String.valueOf(response.wind.speed);
     }
     public String getWindDeg() {
-        return String.valueOf(weatherModel.getWind().getDeg());
+        return String.valueOf(response.wind.deg);
     }
 }
