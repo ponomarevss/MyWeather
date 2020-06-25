@@ -22,10 +22,10 @@ import androidx.fragment.app.Fragment;
 import com.ponomarevss.myweatherapp.R;
 import com.ponomarevss.myweatherapp.RequestHandler;
 import com.ponomarevss.myweatherapp.WeatherRequest;
+import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 import static android.content.Context.MODE_PRIVATE;
 import static com.ponomarevss.myweatherapp.Constants.COORDINATES;
@@ -37,18 +37,9 @@ import static com.ponomarevss.myweatherapp.Constants.SET_PLACE;
 import static com.ponomarevss.myweatherapp.Constants.SUNRISE_AND_SUNSET;
 import static com.ponomarevss.myweatherapp.Constants.TEMPERATURE_DETAILS;
 import static com.ponomarevss.myweatherapp.Constants.VISIBILITY;
-import static com.ponomarevss.myweatherapp.Constants.WEATHER_API_KEY;
-import static com.ponomarevss.myweatherapp.Constants.WEATHER_URL;
 import static com.ponomarevss.myweatherapp.Constants.WIND_SPEED_AND_DIRECTION;
 
 public class HomeFragment extends Fragment {
-
-//    private WeatherModel weatherModel/* = new WeatherModel()*/;
-//    private RequestHandler requestHandler;
-
-//    public void setWeatherModel(WeatherModel weatherModel) {
-//        this.weatherModel = weatherModel;
-//    }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -60,10 +51,8 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         setBackgroundView(view);
         if (getCityId() != null) {
-            new WeatherRequest(this, view, String.format(WEATHER_URL + WEATHER_API_KEY, getCityId()))
+            new WeatherRequest(this, view, getCityId())
                     .makeRequest();
-//            RequestHandler requestHandler = new RequestHandler(this, view, String.format(WEATHER_URL + WEATHER_API_KEY, getCityId()));
-//            weatherModel.makeRequest(this, view, String.format(WEATHER_URL + WEATHER_API_KEY, getCityId()));
         }
     }
 
@@ -83,12 +72,9 @@ public class HomeFragment extends Fragment {
 
     private void showWeatherIconView(View view, RequestHandler requestHandler) {
         ImageView weatherIcon = view.findViewById(R.id.weather_icon);
-//        String iconName = WEATHER_ICON_PREFIX + weatherModel.getWeather()[0].getIcon();
-        if (getActivity() != null) {
-            weatherIcon.setImageResource(getResources().getIdentifier(requestHandler.getIconName(),
-                    "drawable",
-                    getActivity().getPackageName()));
-        }
+        Picasso.get()
+                .load(String.format(getString(R.string.icon_uri), requestHandler.getIcon()))
+                .into(weatherIcon);
     }
 
     private void showSunView(View view, RequestHandler requestHandler) {
@@ -125,9 +111,9 @@ public class HomeFragment extends Fragment {
     private void showTemperatureDetailsView(View view, RequestHandler requestHandler) {
         if (getActivity() != null && getActivity().getPreferences(MODE_PRIVATE).getBoolean(TEMPERATURE_DETAILS, false)) {
             LinearLayout temperatureDetailsLayout = view.findViewById(R.id.temperature_details_layout);
-            makeField(temperatureDetailsLayout, R.string.feels_like_field, requestHandler.getTempFeels_like(), R.string.temperature_unit);
-            makeField(temperatureDetailsLayout, R.string.temp_max_field, requestHandler.getTemp_max(), R.string.temperature_unit);
-            makeField(temperatureDetailsLayout, R.string.temp_min_field, requestHandler.getTemp_min(), R.string.temperature_unit);
+            makeField(temperatureDetailsLayout, R.string.feels_like_field, requestHandler.getTempFeelsLike(), R.string.temperature_unit);
+            makeField(temperatureDetailsLayout, R.string.temp_max_field, requestHandler.getTempMax(), R.string.temperature_unit);
+            makeField(temperatureDetailsLayout, R.string.temp_min_field, requestHandler.getTempMin(), R.string.temperature_unit);
         }
     }
 
@@ -168,7 +154,7 @@ public class HomeFragment extends Fragment {
         moreInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(Objects.requireNonNull(getActivity()));
+                AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
                 builder.setMessage(R.string.lets_go_to_web)
                         .setCancelable(true)
                         .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
@@ -205,13 +191,13 @@ public class HomeFragment extends Fragment {
     }
 
     private String getCityId() {
-        int index = Objects.requireNonNull(getActivity())
+        int index = requireActivity()
                 .getPreferences(MODE_PRIVATE)
                 .getInt(INDEX, INIT_INDEX);
         return index != -1 ? getResources().getStringArray(R.array.cities_id)[index] : null;
     }
     private String getPlace() {
-        return Objects.requireNonNull(getActivity())
+        return requireActivity()
                 .getPreferences(MODE_PRIVATE)
                 .getString(PLACE, SET_PLACE);
     }
@@ -222,7 +208,7 @@ public class HomeFragment extends Fragment {
     }
 
     private int getBackgroundIndex() {
-        return Objects.requireNonNull(getActivity())
+        return requireActivity()
                 .getPreferences(MODE_PRIVATE)
                 .getInt(INDEX, INIT_INDEX);
     }

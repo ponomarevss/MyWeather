@@ -11,7 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:alpha="1"
         android:clickable="false"
         android:contentDescription="@string/background"
         android:focusable="false"
@@ -63,7 +62,7 @@
                     android:id="@+id/coordinates_layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/place"
@@ -78,8 +77,7 @@
                     android:contentDescription="@string/partly_cloudy"
                     app:layout_constraintEnd_toStartOf="@+id/temperature_value"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/coordinates_layout"
-                    tools:srcCompat="@drawable/wi_50d" />
+                    app:layout_constraintTop_toBottomOf="@+id/coordinates_layout" />
 
                 <TextView
                     android:id="@+id/temperature_value"

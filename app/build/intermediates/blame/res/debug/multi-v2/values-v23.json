@@ -4,26 +4,7 @@
             "outputFile": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\watch\\.gradle\\caches\\transforms-2\\files-2.1\\13cf2c1f14bae30261bdb227613b37e7\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "200"
-                    },
-                    "to": {
-                        "startLines": "48",
-                        "startColumns": "4",
-                        "startOffsets": "3407",
-                        "endLines": "50",
-                        "endColumns": "12",
-                        "endOffsets": "3552"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\watch\\.gradle\\caches\\transforms-2\\files-2.1\\eaf17b24d60dc773c7680b20ac141638\\material-1.1.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\watch\\.gradle\\caches\\transforms-2\\files-2.1\\081958b85be993b26123dd5b1125e07f\\material-1.1.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,6",
                         "startColumns": "4,4",
@@ -42,7 +23,26 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\watch\\.gradle\\caches\\transforms-2\\files-2.1\\ea88890b09526096266c9c16859169ae\\appcompat-1.1.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\watch\\.gradle\\caches\\transforms-2\\files-2.1\\c53a1cf06eec9ec8e2c1fa79d76edf7f\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "200"
+                    },
+                    "to": {
+                        "startLines": "48",
+                        "startColumns": "4",
+                        "startOffsets": "3407",
+                        "endLines": "50",
+                        "endColumns": "12",
+                        "endOffsets": "3552"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\watch\\.gradle\\caches\\transforms-2\\files-2.1\\c2c5fa787d66aaf40578b3071f4d283f\\appcompat-1.1.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,37,41,42,43,44",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",

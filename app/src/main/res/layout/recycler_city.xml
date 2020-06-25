@@ -14,7 +14,6 @@
         android:contentDescription="@string/city_image"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:alpha=".5"
         android:scaleType="fitXY"
         tools:srcCompat="@drawable/ci_astrahan" />
 
@@ -25,13 +24,16 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:layout_gravity="center_vertical"
-        android:textStyle="bold"
-        android:textAllCaps="true"
-        android:textColorHighlight="#000"
-        android:shadowColor="#000"
+
+        android:shadowColor="@color/colorBlack"
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="1"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textColorHighlight="@color/colorBlack"
+        android:textStyle="bold"
+        android:textSize="18sp"
         tools:text="Астрахань"/>
 
 </androidx.cardview.widget.CardView>

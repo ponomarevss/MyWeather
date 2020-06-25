@@ -1,27 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wi_13n.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\wi_13n.png"
-    },
-    {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wi_03n.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\wi_03n.png"
-    },
-    {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ci_perm.png.flat",
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\ci_perm.png"
-    },
-    {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wi_10n.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\wi_10n.png"
-    },
-    {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wi_11d.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\wi_11d.png"
     },
     {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ci_ulyanovsk.png.flat",
@@ -32,28 +16,12 @@
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\ic_more_vert_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wi_50n.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\wi_50n.png"
-    },
-    {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ci_saint_petersburg.png.flat",
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\ci_saint_petersburg.png"
-    },
-    {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wi_01d.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\wi_01d.png"
-    },
-    {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wi_04d.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\wi_04d.png"
-    },
-    {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wi_09n.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\wi_09n.png"
     },
     {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ci_yaroslavl.png.flat",
@@ -96,12 +64,12 @@
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\ci_yekaterinburg.png"
     },
     {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_wi_01d.xml.flat",
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\ic_wi_01d.xml"
+    },
+    {
+        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_detail_layout.xml.flat",
@@ -144,10 +112,6 @@
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\ic_home_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wi_01n.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\wi_01n.png"
-    },
-    {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ci_krasnodar.png.flat",
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\ci_krasnodar.png"
     },
@@ -156,12 +120,12 @@
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_main.xml.flat",
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\layout\\content_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ci_nizhny_novgorod.png.flat",
@@ -212,10 +176,6 @@
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wi_09d.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\wi_09d.png"
-    },
-    {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ci_astrahan.png.flat",
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\ci_astrahan.png"
     },
@@ -224,12 +184,12 @@
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\navigation\\mobile_navigation.xml"
     },
     {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ci_khabarovsk.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\ci_khabarovsk.png"
-    },
-    {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_main.xml.flat",
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\layout\\fragment_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ci_khabarovsk.png.flat",
+        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\ci_khabarovsk.png"
     },
     {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
@@ -252,36 +212,16 @@
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\layout\\nav_header_main.xml"
     },
     {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wi_11n.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\wi_11n.png"
-    },
-    {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wi_03d.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\wi_03d.png"
-    },
-    {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wi_50d.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\wi_50d.png"
-    },
-    {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ci_naberezhnie_chelny.png.flat",
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\ci_naberezhnie_chelny.png"
     },
     {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wi_02n.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\wi_02n.png"
-    },
-    {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wi_13d.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\wi_13d.png"
+        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ci_makhachkala.png.flat",
+        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\ci_makhachkala.png"
     },
     {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ci_makhachkala.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\ci_makhachkala.png"
     },
     {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ci_tyumen.png.flat",
@@ -304,10 +244,6 @@
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\ci_saratov.png"
     },
     {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wi_02d.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\wi_02d.png"
-    },
-    {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ci_novokuznetsk.png.flat",
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\ci_novokuznetsk.png"
     },
@@ -322,10 +258,6 @@
     {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_history.xml.flat",
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\layout\\fragment_history.xml"
-    },
-    {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wi_04n.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\wi_04n.png"
     },
     {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_alert_message.xml.flat",
@@ -346,10 +278,6 @@
     {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_menu_camera.xml.flat",
         "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\ic_menu_camera.xml"
-    },
-    {
-        "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wi_10d.png.flat",
-        "source": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\src\\main\\res\\drawable\\wi_10d.png"
     },
     {
         "merged": "C:\\Users\\watch\\AndroidStudioProjects\\MyWeatherApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ci_kirov.png.flat",
